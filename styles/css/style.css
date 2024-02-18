@@ -4,6 +4,7 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11860,9 +11861,18 @@ textarea.form-control-lg {
   transition: opacity 0.3s ease;
 }
 
+.active {
+  opacity: 0;
+}
+
 body {
   margin: 0;
   background-color: rgb(0, 0, 0);
+}
+
+section {
+  background-color: aqua;
+  padding: 500px;
 }
 
 header {
@@ -11879,10 +11889,17 @@ header {
   flex-direction: row;
   justify-content: center;
 }
-
 .contact_info {
   padding: 20px;
   color: rgb(255, 255, 255);
+}
+
+#date, #hour {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: "Kode Mono", monospace;
+  margin-top: 20px;
 }
 
 .presentation {
@@ -11899,10 +11916,12 @@ header {
   margin-left: 100px;
 }
 .presentation .presentationText_title {
+  font-family: "Kode Mono", monospace;
   color: #F4C430;
   font-size: 40px;
 }
 .presentation .presentationText_text {
+  font-family: "Kode Mono", monospace;
   color: rgb(255, 255, 255);
   font-size: 20px;
 }

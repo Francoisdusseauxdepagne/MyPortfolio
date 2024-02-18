@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector('#scrolling-title');
+    const title = document.querySelector('#titleAnimation'),
+    dateEl = document.querySelector('#date'),
+    hourEl = document.querySelector('#hour')
+
+
     function animateText() {
         const text = title.innerText;
         title.innerText = '';
@@ -15,4 +19,30 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(animateText, text.length * 150);
     }
     animateText();
+
+    const displaydate = () => {
+        date = new Date(),
+        year = date.getFullYear(),
+        month = date.getMonth() + 1
+        day = date.getDate();
+        dateEl.textContent = ` Hello ! Nous sommes le ${day}/0${month}/${year}`;
+    }    
+    displaydate();
+
+    const DisplayHour = () => {
+        date = new Date(),
+        hours = date.getHours(),
+        minutes = date.getMinutes(),
+        secondes = date.getSeconds(),
+        hourEl.textContent = `Il est : ${hours}:${minutes}:${secondes}`;
+};
+    DisplayHour();
+    setInterval(DisplayHour, 1000);
+});
+
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if(window.scrollY > 740) {
+        header.classList.add('active');
+    }
 });

@@ -1,16 +1,27 @@
 @import"../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "variable";
 @import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
 // class for script.js
 .letter {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    @include transitionLetter();
 }
 
+.active{
+    opacity: 0;
+}
+
+// body
 body{
     margin: 0;
     background-color: $color_black;
+}
+
+section{
+    background-color: aqua;
+    padding: 500px;
 }
 
 // header
@@ -27,13 +38,18 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-
-.contact{
     &_info{
         padding: 20px;
         color: $color_white;
     }
+}
+
+#date, #hour {
+    text-align: center;
+    color: $color_white;
+    font-size: $fontSizeText;
+    font-family: $fontKodeMono;
+    margin-top: 20px;
 }
 
 .presentation{
@@ -48,12 +64,14 @@ header {
         justify-content: center;
         margin-left: 100px;
         &_title{
+            font-family: $fontKodeMono;
             color: $color_yellow;
-            font-size: 40px;
+            font-size: $fontSizeH1;
         }
         &_text{
+            font-family: $fontKodeMono;
             color: $color_white;
-            font-size: 20px;
+            font-size: $fontSizeText;
         }
         &_link{
             text-decoration: none;
@@ -64,19 +82,8 @@ header {
             &_link{
                 margin: 30px;
                 color: $color_white;
-                font-size: 30px;
-                animation: zoom-animation 2.5s ease-in-out infinite;
-                }
-                @keyframes zoom-animation {
-                0% {
-                    transform: scale(1);
-                }
-                50% {
-                    transform: scale(1.5);
-                }
-                100% {
-                    transform: scale(1);
-                }
+                font-size: $fontSizeLink;
+                @include animationZoom();
             }
         }
     }
