@@ -11866,23 +11866,30 @@ textarea.form-control-lg {
   transition: opacity 1s ease-in-out;
 }
 
-@keyframes moveRight {
-  from {
-    left: 0;
+.star {
+  position: absolute;
+  top: -20px;
+  color: #fff;
+  animation: animate 10s ease-out forwards;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
   }
-  to {
-    left: calc(100vw - 10px);
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
   }
 }
-.container #startAnimation {
-  color: #00A859;
-  font-family: "Kode Mono", monospace;
-  border-radius: 5px;
-  padding: 5px;
-}
-.container #startAnimation:hover {
-  background-color: #00A859;
-  color: #F7F4EF;
+
+.star::before {
+  content: "\f005";
+  font-family: FontAwesome;
+  text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 50px #fff;
 }
 
 body {
@@ -11902,6 +11909,15 @@ header {
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 100vh;
+}
+header .container {
+  margin-top: 10px;
+}
+header .container_btnStars {
+  color: #F7F4EF;
+  background-color: #7F48E0;
+  font-family: "Kode Mono", monospace;
+  border-radius: 5px;
 }
 header .contact {
   display: flex;

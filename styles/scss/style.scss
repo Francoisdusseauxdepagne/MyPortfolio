@@ -3,7 +3,7 @@
 @import "mixin";
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
-// class for script.js
+// // class for script.js
 .active {
     opacity: 1;
     transition: opacity 1s ease-in-out; 
@@ -13,28 +13,19 @@
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
-
-@keyframes moveRight {
-    from {
-        left: 0;
-    }
-    to {
-        left: calc(100vw - 10px);
-    }
-}
-
-.container{
-    #startAnimation{
-        color: $color_yellow;
-        font-family: $fontKodeMono;
-        border-radius: 5px;
-        padding: 5px;
-        &:hover{
-            background-color: $color_yellow;
-            color: $color_white;
-        }
-    }
-}
+// button for stars
+.star{
+    position: absolute;
+    top: -20px;
+    color: #fff;
+    @include stars();
+  }
+  
+  .star::before {
+    content: "\f005";
+    font-family: FontAwesome;
+    text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 50px #fff;
+  }
 
 // body
 body{
@@ -46,8 +37,6 @@ body{
     background-repeat: no-repeat;
 }
 
-
-
 // header
 header {
     position: relative;
@@ -57,6 +46,15 @@ header {
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100vh;
+    .container{
+        margin-top: 10px;
+        &_btnStars{
+            color: $color_white;
+            background-color: $color_blue;
+            font-family: $fontKodeMono;
+            border-radius: 5px;
+        }
+    }
     .contact{
         display: flex;
         flex-direction: row;

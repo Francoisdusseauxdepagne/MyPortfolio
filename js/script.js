@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let letter2 = new Typed('.presentationText_title2', {
-        strings: ["Click on my name", "A revelation is pending", ],
+        strings: ["Click on my name", "To begin the adventure", ],
         typeSpeed: 70,
         backSpeed: 30,
         loop: true
@@ -85,7 +85,7 @@ window.addEventListener('scroll', () => {
 const change = document.querySelector('.presentationText_presentation');
 
 change.addEventListener('click', () => {
-    change.textContent = "I invite you to explore the site further. Enjoy your visit!";
+    change.textContent = "To see my portfolio, scroll down. Enjoy your visit!";
     change.style.color = "#2086B7";
     change.style.margin = "auto";
     change.style.width = "70%";
@@ -99,7 +99,7 @@ change.addEventListener('click', () => {
         change.style.width = "70%";
         change.style.paddingTop = "150px";
         change.style.paddingBottom = "150px";
-    }, 2000);
+    }, 2500);
 })
 
 const btnCompetences = document.querySelector('.btnDisplayCompetences');
@@ -160,23 +160,32 @@ if (window.innerWidth > 768) {
 }
 
 const btn = document.querySelector('#startAnimation');
-const stars = document.querySelector('#stars');
-
 btn.addEventListener('click', () => {
-    const bluePoint = document.createElement('div');
-    let color = Math.floor(Math.random()*16777215).toString(16);
+    function star(){
+        let divEl = document.createElement('div');
+        divEl.classList.add('star');
+        document.body.appendChild(divEl);
+        divEl.style.left = Math.random() * +innerWidth + "px";
     
-    bluePoint.style.width = '12px';
-    bluePoint.style.height = '12px';
-    const randomColor = '#' + color;
-    bluePoint.style.background = randomColor;    
-    bluePoint.style.borderRadius = '50%';
-    bluePoint.style.position = 'absolute';
-    bluePoint.style.left = Math.random() * window.innerWidth + 'px'; // Position aléatoire en x
-    bluePoint.style.top = Math.random() * window.innerHeight + 'px'; // Position aléatoire en y
-
-    bluePoint.style.animation = 'moveRight 5s ease-in-out infinite'; // Animation
-
-    document.body.appendChild(bluePoint);
+        let size = Math.random() * 7; // defini la taille des etoiles aleatoirement
+        let duration = Math.random() * 3; // defini la duree de l'animation aleatoirement
+    
+        divEl.style.fontSize = size + 'px';
+        divEl.style.animationDuration = duration + 's';
+    
+        setTimeout(() => {
+            document.body.removeChild(divEl);
+        }, 3000);
+    }
+    setInterval(function(){
+        star();
+    }, 50)
 });
 
+function changeText(){
+    let colors = ["#7F48E0", "#7F48E0", "#040404", "#FCD05B", "#7B63AA"];
+    const Btn2 = document.querySelector('#startAnimation');
+    Btn2.textContent = "Again !";
+    Btn2.style.color = colors[Math.floor(Math.random()*colors.length)];
+
+}
