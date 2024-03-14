@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="../styles/css/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <button id="startAnimation" class="mt-2">Etoiles filantes ?</button>
+        <div id="stars"></div>
+    </div>
+    <header id="header">
+        <div class="contact">
+            <a href="tel:+33612432644" title="Appelez moi" alt="numero de telephone"><i class="fa-solid fa-mobile contact_info">: 06 12 43 26 44</i></a>
+            <a href="mailto:: francoisddpro@gmail.com" title="Ecrivez moi" alt="email"><i class="fa-solid fa-at contact_info">: francoisddpro@gmail.com</i></a>
+        </div>
+        <div id="date"></div>
+        <div id="hour"></div>
+        <div class="presentation">
+            <div class="presentationText">
+                    <h1 class="presentationText_presentation">"Hi I'm François DUSSEAUX-DEPAGNE <br> Welcome to my Portfolio !"</h1>
+                    <h2 class="presentationText_title2"></h2>
+                    <a href="../images/CV François DD.pdf" target="_blank" class="presentationText_link">Download my CV</a>
+                <div class="presentationText_network">
+                    <a href="www.linkedin.com/in/françois-dusseaux-depagne-7937372a5"><i class="fa-brands fa-linkedin presentationText_network_link"></i></a>
+                    <a href="https://github.com/Francoisdusseauxdepagne" target="_blank"><i class="fa-brands fa-github presentationText_network_link"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="Apropos">
+            <div class="textApropos">
+                <h2 class="textApropos_title">Who am I ?</h2>
+                <p class="textApropos_text"><strong class="textApropos_text--typed"></strong><br>"Young in the field of development, I am passionate about crafting captivating and innovative digital experiences. As you delve into my projects, you'll witness my commitment to learning and growing in this domain. Explore my achievements to uncover my journey and expanding skills in web and mobile development."<br></p>
+            </div>
+        </section>
+        <section id="competences">
+                <div class="btnDisplayCompetences">
+                    <input type="submit" value="See my skills" class="btnDisplayCompetences_btn">
+                </div>
+                <div class="competences">
+                    <div class="item">
+                        <h3 class="item_title">Front-end development</h3>
+                        <ul class="item_lists">
+                            <li>HTML/CSS</li>
+                            <li>SCSS/SASS/BEM</li>
+                            <li>JavaScript</li>
+                            <li>Framworks: Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3 class="item_title">Back-end development</h3>
+                        <ul class="item_lists">
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>Workbench My SQL</li>
+                            <li>Création d'une API</li>
+                            <li>NodeJS</li>
+                            <li>Express</li>
+                            <li>npm</li>
+                            <li>Cors</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3 class="item_title">Responsive Design</h3>
+                        <ul class="item_lists">
+                            <li>Desktop</li>
+                            <li>Tablet</li>
+                            <li>Mobile & Mobile First</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projets">
+            <div class="projets">
+                <div class="imageProjet"></div>
+                <div class="listsProjet">
+                    <h3 class="listsProjet_title">My Projects</h3>
+                    <ul class="listsProjet_lists">
+                        <li class="fitList">FitCoaching <br><small><em>Full Stack</em></small></li>
+                        <li class="lensList">Robbies Lens photographie <small><em>Front-end</em></small></li>
+                        <li class="shopList">Men's Shop<br><small><em>API creation</em></small></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="text-center mt-5 footerText">© 2023 Portfolio. All rights reserved</p>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
