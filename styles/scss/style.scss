@@ -46,13 +46,14 @@ header {
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100vh;
-    .container{
+    .animation{
         margin-top: 10px;
         &_btnStars{
             color: $color_white;
-            background-color: $color_blue;
+            background-color: $color_purple;
             font-family: $fontKodeMono;
-            border-radius: 5px;
+            border-radius: 10px;
+            padding: 10px;
         }
     }
     .contact{
@@ -72,8 +73,6 @@ header {
         margin-top: 20px;
     }
     .presentation{
-        margin: auto;
-        width: 80%;
         .presentationText{
             position: relative;
             display: flex;
@@ -94,7 +93,7 @@ header {
             }
             &_title2{
                 position: absolute;
-                color: $color_yellow;
+                color: $color_green;
                 font-family: $fontKodeMono;
                 font-size: $fontSizeText;
                 padding: 5px;
@@ -111,7 +110,7 @@ header {
                 color: $color_white;
            }
            &_forme{
-                border: 1px solid $color_yellow;
+                border: 1px solid $color_green;
                 padding: 10px;
                 position: absolute;
                 left: -175px;
@@ -119,7 +118,7 @@ header {
                 width: 100px;
                 padding: 100px; 
                 background-color: #ffffff;
-                background-color: $color_yellow;
+                background-color: $color_green;
            }
            .presentationText_network{
                 &_link{
@@ -149,7 +148,7 @@ main{
     .textApropos{
         &_title{
             font-family: $fontKodeMono;
-            color: $color_blue;
+            color: $color_purple;
             font-size: $fontSizeH2;
             @media screen and (max-width: 768px) {
                 font-size: $fontSizeText;
@@ -164,7 +163,7 @@ main{
                 font-size: $fontSizeText2;
             }
             &--typed{
-                color: $color_yellow;
+                color: $color_green;
             }
         }
     }
@@ -179,11 +178,9 @@ main{
             @include borderBtn();
             color: $color_white;
             font-size: $fontSizeLink;
-            @include moveX();
             @media screen and (max-width: 768px) {
                 width: 50vh;
                 font-size: 20px;
-                @include moveX2();
             }
         }
     }
@@ -218,7 +215,7 @@ main{
             }
             &_title{
                 font-family: $fontKodeMono;
-                color: $color_yellow;
+                color: $color_green;
                 font-size: $fontSizeH3;
             }
             &_lists{
@@ -232,11 +229,8 @@ main{
 
 #projets{
     margin-top: 200px;
-    margin-left: 10px;
-    @media  screen and (max-width: 768px) {
-        margin-top: 0px;
-        margin-left: 0px;
-        margin-bottom: 100px;
+    @media screen and (max-width: 768px) {
+        text-align: center;
         display: flex;
         flex-direction: column;
     }
@@ -246,8 +240,8 @@ main{
         @media screen and (max-width: 768px) {
             display: flex;
             flex-direction: column;
-            justify-content: start;
-            width: 60vh;
+            width: 50%;
+            margin: auto;
         }
         .imageProjet{
            width: 80%;
@@ -268,7 +262,8 @@ main{
             &_title{
                 margin-left: 100px;
                 @media screen and (max-width: 768px) {
-                    margin-left: 0px;
+                    text-align: center;
+                    margin-left: 0%;             
                 }
             }
             &_lists{
@@ -277,13 +272,12 @@ main{
                 padding: 0%;
                 margin-top: 20px;
                 @media screen and (max-width: 768px) {
-                    margin-left: 0%;
-                    margin-bottom: 100px;
-                    width: 10vh;
+                    margin: auto;
+                    width: 100%;
                 }
                 .phpList, .fitList, .lensList, .shopList{
-                    border-top: 1px solid $color_yellow;
-                    border-bottom: 2px solid $color_yellow;
+                    border-top: 1px solid $color_green;
+                    border-bottom: 2px solid $color_green;
                     padding: 20px;
                     margin-right: 20px;
                     &:hover{
@@ -298,7 +292,6 @@ main{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    width: 100vh;
                 }
             }
         }
@@ -310,7 +303,7 @@ footer{
     margin-top: 150px;
     .footerText{
         font-family: $fontKodeMono;
-        color: $color_blue;
+        color: $color_purple;
     }
 }
 

@@ -11910,14 +11910,15 @@ header {
   background-repeat: no-repeat;
   height: 100vh;
 }
-header .container {
+header .animation {
   margin-top: 10px;
 }
-header .container_btnStars {
+header .animation_btnStars {
   color: #F7F4EF;
   background-color: #7F48E0;
   font-family: "Kode Mono", monospace;
-  border-radius: 5px;
+  border-radius: 10px;
+  padding: 10px;
 }
 header .contact {
   display: flex;
@@ -11934,10 +11935,6 @@ header #date, header #hour {
   font-size: 25px;
   font-family: "Kode Mono", monospace;
   margin-top: 20px;
-}
-header .presentation {
-  margin: auto;
-  width: 80%;
 }
 header .presentation .presentationText {
   position: relative;
@@ -12070,35 +12067,11 @@ main {
   font-family: "Kode Mono", monospace;
   color: #F7F4EF;
   font-size: 30px;
-  animation: moveX 2s ease-in-out infinite;
-}
-@keyframes moveX {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(30px);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
 @media screen and (max-width: 768px) {
   #competences .btnDisplayCompetences_btn {
     width: 50vh;
     font-size: 20px;
-    animation: moveX2 2s ease-in-out infinite;
-  }
-  @keyframes moveX2 {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(5px);
-    }
-    100% {
-      transform: translateX(0);
-    }
   }
 }
 #competences .competences {
@@ -12149,13 +12122,10 @@ main {
 
 #projets {
   margin-top: 200px;
-  margin-left: 10px;
 }
 @media screen and (max-width: 768px) {
   #projets {
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 100px;
+    text-align: center;
     display: flex;
     flex-direction: column;
   }
@@ -12168,8 +12138,8 @@ main {
   #projets .projets {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    width: 60vh;
+    width: 50%;
+    margin: auto;
   }
 }
 #projets .projets .imageProjet {
@@ -12194,7 +12164,8 @@ main {
 }
 @media screen and (max-width: 768px) {
   #projets .projets .listsProjet_title {
-    margin-left: 0px;
+    text-align: center;
+    margin-left: 0%;
   }
 }
 #projets .projets .listsProjet_lists {
@@ -12205,9 +12176,8 @@ main {
 }
 @media screen and (max-width: 768px) {
   #projets .projets .listsProjet_lists {
-    margin-left: 0%;
-    margin-bottom: 100px;
-    width: 10vh;
+    margin: auto;
+    width: 100%;
   }
 }
 #projets .projets .listsProjet_lists .phpList, #projets .projets .listsProjet_lists .fitList, #projets .projets .listsProjet_lists .lensList, #projets .projets .listsProjet_lists .shopList {
@@ -12230,7 +12200,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100vh;
   }
 }
 

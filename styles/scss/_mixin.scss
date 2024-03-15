@@ -1,6 +1,6 @@
 @mixin borderBtn(){
     border: none;
-    background-color: $color_blue;
+    background-color: $color_purple;
     border-radius: 15px;
     padding: 15px;
     cursor: pointer;
@@ -22,25 +22,6 @@
         }
     }
 }
-
-@mixin moveX {
-    animation: moveX 2s ease-in-out infinite;
-    @keyframes moveX {
-        0% { transform: translateX(0); }
-        50% { transform: translateX(30px); }
-        100% { transform: translateX(0); }
-    }
-}
-
-@mixin moveX2 {
-    animation: moveX2 2s ease-in-out infinite;
-    @keyframes moveX2 {
-        0% { transform: translateX(0); }
-        50% { transform: translateX(5px); }
-        100% { transform: translateX(0); }
-    }
-}
-
 
 @mixin stars{
     animation: animate 10s ease-out forwards;
