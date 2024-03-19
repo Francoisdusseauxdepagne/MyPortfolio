@@ -102,19 +102,19 @@ change.addEventListener('click', () => {
     }, 2500);
 })
 
-const btnCompetences = document.querySelector('.btnDisplayCompetences');
-btnCompetences.addEventListener("click", () => {
-    const items = document.querySelectorAll('.item');
-    function animateItems() {
-        items.forEach((item, index) => {
-            setTimeout(() => {
-                item.style.opacity = "1";
-                item.style.transform = "translateX(0)";
-            }, 850 * (index + 1));
-        });
-    }    
-    animateItems();
-})
+// const btnCompetences = document.querySelector('.btnDisplayCompetences');
+// btnCompetences.addEventListener("click", () => {
+//     const items = document.querySelectorAll('.item');
+//     function animateItems() {
+//         items.forEach((item, index) => {
+//             setTimeout(() => {
+//                 item.style.opacity = "1";
+//                 item.style.transform = "translateX(0)";
+//             }, 850 * (index + 1));
+//         });
+//     }    
+//     animateItems();
+// })
 
 function createImage(imgData, divEl, opacity, width, top, left) {
     const img = document.createElement("img");
@@ -181,11 +181,3 @@ btn.addEventListener('click', () => {
         star();
     }, 50)
 });
-
-function changeText(){
-    let colors = ["#7F48E0", "#7F48E0", "#040404", "#FCD05B", "#7B63AA"];
-    const Btn2 = document.querySelector('#startAnimation');
-    Btn2.textContent = "Again !";
-    Btn2.style.color = colors[Math.floor(Math.random()*colors.length)];
-
-}

@@ -42,3 +42,29 @@
     }
 }
 
+@mixin borderAnimation {
+    border : 3px solid transparent;
+    font-family: $fontKodeMono;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: $color_white;
+    font-size: $fontSizeText;
+    animation: borderAnimation 1s infinite ease-out; /* Animation infinie en boucle */
+    @keyframes borderAnimation {
+        0% {
+            border-color: $color_yellow; /* Couleur de depart (vert) */
+        }
+        25% {
+            border-color: $color_green; /* Couleur intermediaire */    
+        }
+        50% {
+            border-color: $color_orange; /* Couleur intermediaire */
+        }
+        100% {
+            border-color: $color_yellow; /* Couleur finale (rouge) */
+        }   
+    }
+}
+

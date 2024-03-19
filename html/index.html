@@ -10,14 +10,15 @@
     <title>My Portfolio</title>
 </head>
 <body>
+    <!-- <div class="animation text-center">
+        <button id="startAnimation">Click me</button>
+    </div> -->
     <header id="header">
-        <div class="animation ms-5">
-            <button class="animation_btnStars" id="startAnimation">Shooting stars ? click me</button>
-        </div>
         <div class="contact">
             <a href="tel:+33612432644" title="Appelez moi" alt="numero de telephone"><i class="fa-solid fa-mobile contact_info">: 06 12 43 26 44</i></a>
             <a href="mailto:: francoisddpro@gmail.com" title="Ecrivez moi" alt="email"><i class="fa-solid fa-at contact_info">: francoisddpro@gmail.com</i></a>
         </div>
+        <a href="test.html" class="text-white">test</a>
         <div id="date"></div>
         <div id="hour"></div>
         <div class="presentation">
@@ -36,7 +37,7 @@
         <section id="Apropos">
             <div class="textApropos">
                 <h2 class="textApropos_title">Who am I ?</h2>
-                <p class="textApropos_text"><strong class="textApropos_text--typed"></strong><br>"Young in the field of development, I am passionate about crafting captivating and innovative digital experiences. As you delve into my projects, you'll witness my commitment to learning and growing in this domain. Explore my achievements to uncover my journey and expanding skills in web and mobile development."<br></p>
+                <p class="textApropos_text"><strong class="textApropos_text--typed"></strong><br>"Young in the field of development, I am <span class="textApropos_text--yellow">passionate</span> about crafting captivating and innovative digital experiences. As you delve into my projects, you'll witness my commitment to learning and growing in this domain. <span class="textApropos_text--yellow">Explore</span> my achievements to uncover my journey and expanding skills in web and mobile development."<br></p>
             </div>
         </section>
         <section id="competences">
@@ -45,17 +46,21 @@
                 </div>
                 <div class="competences">
                     <div class="item">
-                        <h3 class="item_title">Front-end development</h3>
+                        <h3 class="item_title1">Front-end development</h3>
                         <ul class="item_lists">
                             <li>HTML/CSS</li>
-                            <li>SCSS/SASS/BEM</li>
+                            <li>SCSS</li>
+                            <li>SASS</li>
+                            <li>BEM</li>
                             <li>JavaScript</li>
                             <li>Framworks: Bootstrap</li>
                             <li>Responsive Design</li>
+                            <li>SEO</li>
                         </ul>
+                        <img src="../images/frontEnd.png" alt="" class="item_img">
                     </div>
                     <div class="item">
-                        <h3 class="item_title">Back-end development</h3>
+                        <h3 class="item_title2">Back-end development</h3>
                         <ul class="item_lists">
                             <li>PHP</li>
                             <li>MySQL</li>
@@ -64,15 +69,9 @@
                             <li>NodeJS</li>
                             <li>Express</li>
                             <li>npm</li>
-                            <li>Cors</li>
+                            <li>Symfony</li>
                         </ul>
-                    </div>
-                    <div class="item">
-                        <h3 class="item_title">Others</h3>
-                        <ul class="item_lists">
-                            <li>SEO</li>
-                            <li>Mobile First</li>
-                        </ul>
+                        <img src="../images/backEnd.png" alt="" class="item_img">
                     </div>
                 </div>
             </div>
