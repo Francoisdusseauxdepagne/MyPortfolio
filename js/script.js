@@ -37,6 +37,29 @@ document.addEventListener("DOMContentLoaded", () => {
         backSpeed: 30,
         loop: true
     });
+    
+    function star(){
+        let divEl = document.createElement('div');
+        divEl.classList.add('star');
+        document.body.appendChild(divEl);
+        divEl.style.left = Math.random() * +innerWidth + "px";
+    
+        let size = Math.random() * 5; // defini la taille des etoiles aleatoirement
+        let duration = Math.random() * 2; // defini la duree de l'animation aleatoirement
+    
+        divEl.style.fontSize = size + 'px';
+        divEl.style.animationDuration = duration + 's';
+
+        let colors = ["#F7F4EF", "#00A859", "#D15D64", "#E88334", "#7B63AA", "#FCD05B"]; // defini les couleurs des etoiles dans un tableau
+        divEl.style.color = colors[Math.floor(Math.random() * colors.length)];
+    
+        setTimeout(() => {
+            document.body.removeChild(divEl);
+        }, 2000);
+    }
+    setInterval(function(){
+        star();
+    }, 30)
 });
 
 // script pour defilement au scroll pour header
@@ -102,20 +125,6 @@ change.addEventListener('click', () => {
     }, 2500);
 })
 
-// const btnCompetences = document.querySelector('.btnDisplayCompetences');
-// btnCompetences.addEventListener("click", () => {
-//     const items = document.querySelectorAll('.item');
-//     function animateItems() {
-//         items.forEach((item, index) => {
-//             setTimeout(() => {
-//                 item.style.opacity = "1";
-//                 item.style.transform = "translateX(0)";
-//             }, 850 * (index + 1));
-//         });
-//     }    
-//     animateItems();
-// })
-
 function createImage(imgData, divEl, opacity, width, top, left) {
     const img = document.createElement("img");
     img.src = imgData.src;
@@ -158,26 +167,3 @@ function mouv() {
 if (window.innerWidth > 768) {
     mouv();
 }
-
-const btn = document.querySelector('#startAnimation');
-btn.addEventListener('click', () => {
-    function star(){
-        let divEl = document.createElement('div');
-        divEl.classList.add('star');
-        document.body.appendChild(divEl);
-        divEl.style.left = Math.random() * +innerWidth + "px";
-    
-        let size = Math.random() * 7; // defini la taille des etoiles aleatoirement
-        let duration = Math.random() * 3; // defini la duree de l'animation aleatoirement
-    
-        divEl.style.fontSize = size + 'px';
-        divEl.style.animationDuration = duration + 's';
-    
-        setTimeout(() => {
-            document.body.removeChild(divEl);
-        }, 3000);
-    }
-    setInterval(function(){
-        star();
-    }, 50)
-});

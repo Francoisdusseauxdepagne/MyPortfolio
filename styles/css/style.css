@@ -11869,7 +11869,6 @@ textarea.form-control-lg {
 .star {
   position: absolute;
   top: -20px;
-  color: #fff;
   animation: animate 10s ease-out forwards;
 }
 @keyframes animate {
@@ -12131,6 +12130,7 @@ main {
     border-radius: 10px;
     margin: auto;
     width: 90%;
+    margin-top: 40px;
   }
 }
 #competences .competences .item_title1, #competences .competences .item_title2, #competences .competences .item_title3 {
@@ -12165,6 +12165,12 @@ main {
     flex-direction: column;
   }
 }
+#projets .titleProjet {
+  font-family: "Kode Mono", monospace;
+  color: #00A859;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
 #projets .projets {
   display: flex;
   flex-direction: row;
@@ -12173,12 +12179,11 @@ main {
   #projets .projets {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin: auto;
+    width: 100vh;
   }
 }
 #projets .projets .imageProjet {
-  width: 80%;
+  width: 95%;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -12188,62 +12193,43 @@ main {
   }
 }
 #projets .projets .listsProjet {
-  width: 100%;
+  width: 45%;
   color: #F7F4EF;
   font-family: "Kode Mono", monospace;
   font-size: 25px;
-  width: 60%;
-}
-#projets .projets .listsProjet_title {
-  margin-left: 100px;
-}
-@media screen and (max-width: 768px) {
-  #projets .projets .listsProjet_title {
-    text-align: center;
-    margin-left: 0%;
-  }
 }
 #projets .projets .listsProjet_lists {
-  margin-left: 100px;
   list-style-type: none;
   padding: 0%;
   margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
   #projets .projets .listsProjet_lists {
+    width: 50%;
     margin: auto;
-    width: 100%;
   }
 }
 #projets .projets .listsProjet_lists .phpList, #projets .projets .listsProjet_lists .fitList, #projets .projets .listsProjet_lists .lensList, #projets .projets .listsProjet_lists .shopList {
-  border-top: 1px solid #00A859;
   border-bottom: 2px solid #00A859;
   padding: 20px;
-  margin-right: 20px;
+  width: 50vh;
 }
 #projets .projets .listsProjet_lists .phpList:hover, #projets .projets .listsProjet_lists .fitList:hover, #projets .projets .listsProjet_lists .lensList:hover, #projets .projets .listsProjet_lists .shopList:hover {
   cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   #projets .projets .listsProjet_lists .phpList, #projets .projets .listsProjet_lists .fitList, #projets .projets .listsProjet_lists .lensList, #projets .projets .listsProjet_lists .shopList {
-    margin-right: 0px;
-    width: 56vh;
-  }
-}
-@media screen and (max-width: 768px) {
-  #projets .projets .listsProjet_lists {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    border-bottom: 2px solid #00A859;
+    margin-left: 120px;
   }
 }
 
 footer {
-  margin-top: 150px;
+  margin-top: 300px;
 }
 footer .footerText {
+  color: #FCD05B;
   font-family: "Kode Mono", monospace;
-  color: #7B63AA;
 }
 
 /*# sourceMappingURL=style.css.map */
